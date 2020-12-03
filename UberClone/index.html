@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="index.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div id="main">
+            <header>
+                <div class="flex bg-black p-3  text-white items-center sm:p-3 sm:py xl:px-12 xl:py-4">
+                    <div class="text-2xl mx-4">Uber</div>
+                    <div class="mx-4 hidden sm:hidden xl:block">
+                        <ul class="flex font-medium cursor-pointer items-center">
+                            <li class="pr-2 flex items-center justify-center">
+                                <a href="#"
+                                    class="py-2 px-3 text-center rounded-full hover:bg-gray-400 hover:bg-opacity-25">Company</a>
+                            </li>
+
+                            <li class="pr-2 flex items-center justify-center">
+                                <a href="#"
+                                    class="py-2 px-3 text-center rounded-full hover:bg-gray-400 hover:bg-opacity-25">Safety</a>
+                            </li>
+                            <li class="pr-2 flex items-center justify-center">
+                                <a href="#"
+                                    class="py-2 px-3 text-center rounded-full hover:bg-gray-400 hover:bg-opacity-25">Help</a>
+                            </li>
+                            <li class="pr-2 flex items-center justify-center">
+                                <a href="#"
+                                    class="py-2 px-3 text-center rounded-full hover:bg-gray-400 hover:bg-opacity-25">COVID_19
+                                    resources</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ml-auto hidden sm:hidden xl:block">
+                        <ul class="flex font-medium cursor-pointer items-center">
+                            <li class="pr-2 flex items-center justify-center">
+                                <a href="#"
+                                    class="flex items-center justify-center py-2 px-3 text-center rounded-full hover:bg-gray-400 hover:bg-opacity-25">
+                                    <img src="./icons/globe.png" alt="globe" class="w-10 px-2" />EN</a>
+                            </li>
+                            <li class="pr-2 flex items-center justify-center">
+                                <a href="#"
+                                    class="flex items-center justify-center py-2 px-3 text-center rounded-full hover:bg-gray-400 hover:bg-opacity-25">
+                                    <img src="./icons/icons8-squared-menu-30 (1).png" alt="menu"
+                                        class="w-10 px-2" />Products</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="flex items-center justify-center ml-auto text-sm">
+                        <ul class="flex font-medium cursor-pointer items-center">
+                            <li class="pr-2 flex items-center justify-center">
+                                <a href="#"
+                                    class="flex items-center justify-center p-0 xl:px-3 text-center rounded-full hover:bg-gray-400 hover:bg-opacity-25">
+                                    <img src="./icons/icons8-user-16.png" alt="user" class="w-10 px-2" /><span
+                                        class="hidden sm:hidden xl:block">login</span>
+                            </li></a>
+                            <li class="flex items-center bg-white text-black justify-center rounded-full ">
+                                <a href="#"
+                                    class="py-2 px-3 text-center rounded-full hover:bg-gray-400 hover:bg-opacity-25">Sign
+                                    up</a>
+                            </li>
+                        </ul>
+                        <div id="menu"
+                            class="mx-2 cursor-pointer rounded-full p-2 rounded-full hover:bg-gray-400 hover:bg-opacity-25">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" size="16" color="white"
+                                class="">
+                                <title>Two lines (filled)</title>
+                                <path d="M2 6h20v3H2V6z" fill="currentColor"></path>,
+                                <path d="M2 15h20v3H2v-3z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <div id="active-menu"
+                            class="mx-2 cursor-pointer rounded-full p-2 bg-gray-400 bg-opacity-25 hidden">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" size="16" color="white">
+                                <title>X (filled)</title>
+                                <path
+                                    d="M21.1 5.1l-2.2-2.2-6.9 7-6.9-7-2.2 2.2 7 6.9-7 6.9 2.2 2.2 6.9-7 6.9 7 2.2-2.2-7-6.9 7-6.9z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                    </div>
+            </header>
+
+            <section class="relative">
+                <section class="p-0 z-10 sm:p-0 xl:p-16">
+                    <div class="tabs flex items-center p-3 bg-white">
+                        <ul class="flex text-sm justify-between w-full overflow-scroll xl:text-base">
+                            <li class="flex flex-col justify-center items-center cursor-pointer p-4 pt-6 tab mx-4 whitespace-no-wrap border-b border-black"
+                                id="1">
+                                <img src="/icons/Earn-filled.svg" alt="Earn " class="w-5 xl:w-6 mx-6 mb-2" />Earn</li>
+                            <li class=" flex flex-col justify-center items-center cursor-pointer p-4 pt-6 tab mx-4 whitespace-no-wrap border-black"
+                                id="2"><img src="./icons/car-front-outlined.svg" alt="Ride "
+                                    class="sm:w-5 xl:w-6 mx-6 mb-2" />Ride</li>
+                            <li class=" flex flex-col justify-center items-center cursor-pointer p-4 pt-6 tab mx-4 whitespace-no-wrap border-black"
+                                id="3"><img src="./icons/restaurant-outlined.svg" alt="Eat"
+                                    class="sm:w-5 xl:w-6 mx-6 mb-2" />Eat</li>
+                            <li class=" flex flex-col justify-center items-center cursor-pointer p-4 pt-6 tab mx-4 whitespace-no-wrap border-black"
+                                id="4"><img src="./icons/truck-outlined.svg" alt="Eat"
+                                    class="sm:w-5 xl:w-6 mx-6 mb-2" />Frieght</li>
+                            <li class=" flex flex-col justify-center items-center cursor-pointer p-4 pt-6 tab mx-4 whitespace-no-wrap border-black"
+                                id="5"><img src="./icons/briefcase-outlined.svg" alt="Eat"
+                                    class="sm:w-5 xl:w-6 mx-6 mb-2" />Business</li>
+                            <li class=" flex flex-col justify-center items-center cursor-pointer p-4 pt-6 tab mx-4 whitespace-no-wrap border-black"
+                                id="6"><img src="./icons/train-outlined.svg" alt="Eat"
+                                    class="sm:w-5 xl:w-6 mx-6 mb-2" />transist</li>
+                            <li class=" flex flex-col justify-center items-center cursor-pointer p-4 pt-6 tab mx-4 whitespace-no-wrap border-black"
+                                id="7"><img src="./icons/bike-outlined.svg" alt="Eat" class="sm:w-5 xl:w-6 mx-6 mb-2" />
+                                <div>Bike & scoot</div>
+                            </li>
+                            <li class=" flex flex-col justify-center items-center cursor-pointer p-4 pt-6 tab mx-4 whitespace-no-wrap border-black"
+                                id="8"><img src="./icons/copter_outlined.svg" alt="Eat"
+                                    class="sm:w-5 xl:w-6 mx-6 mb-2" />elevate</li>
+                        </ul>
+                    </div>
+                    <div class="grid grid-cols-12 justify-start">
+                        <div id="tab-1-content"
+                            class="relative p-6 xl:p-10 bg-white tab-content visible col-span-12 xl:col-span-7"
+                            style="grid-row: 1;">
+                            <h1 class="text-4xl font-medium">Get in the drive's seat and get paid</h1>
+                            <p class="text-base my-4">Drive on the platform with the largest network of active hours</p>
+                            <div class="flex flex-col items-start sm:flex">
+                                <button
+                                    class="bg-black text-white text-base leading-tight font-medium px-6 py-3 sm:py-4 mt-4 mb-3 mr-3">Sign
+                                    up to
+                                    drive</button>
+                                <p class="text-base py-1  cursor-pointer border-b border-gray-600">Learn more from
+                                    driving and delivering</p>
+                            </div>
+                        </div>
+
+                        <div id="tab-2-content"
+                            class="relative p-6 xl:p-10 bg-white tab-content hidden col-span-12 xl:col-span-7"
+                            style="grid-row: 1;">
+                            <h1 class="text-4xl font-medium">Request a ride now</h1>
+                            <input type="text" class="bg-gray-200 p-4 my-2 w-full"
+                                placeholder="Enter pickup location" /><br>
+                            <input type="text" class="bg-gray-200 p-4 my-2 w-full"
+                                placeholder="Enter destination" /><br>
+                            <button class="bg-black text-white leading-tight text-lg p-4 py-3 my-8 mb-3 mr-4">Request
+                                Now</button>
+                            <button class="bg-gray-400 text-black leading-tight text-lg p-4 py-3 my-8 mb-3">Schedule for
+                                later</button>
+
+                        </div>
+
+
+                        <div id="tab-3-content"
+                            class="relative p-6 xl:p-10 bg-white tab-content hidden col-span-12 xl:col-span-7"
+                            style="grid-row: 1;">
+                            <h1 class="text-4xl font-medium">Discover delicious eats</h1>
+                            <p class="text-base my-4">Order delibery from restaraunts you love</p>
+                            <div class="flex flex-col items-start sm:flex">
+                                <button
+                                    class="bg-black text-white text-base leading-tight font-medium px-6 py-3 sm:py-4 mt-4 mb-3 mr-3">Order
+                                    now</button>
+                                <p class="text-base py-1  cursor-pointer border-b border-gray-600">Own a restaraunt?
+                                    partner with Uber Eats</p>
+                            </div>
+                        </div>
+
+                        <div id="tab-4-content"
+                            class="relative p-6 xl:p-10 bg-white tab-content hidden col-span-12 xl:col-span-7"
+                            style="grid-row: 1;">
+                            <h1 class="text-4xl font-medium">A new direction for frieght</h1>
+                            <p class="text-base my-4">Greater transparency for shippers and carriers to do business
+                                together</p>
+                            <div class="flex flex-col items-start sm:flex">
+                                <button
+                                    class="bg-black text-white text-base leading-tight font-medium px-6 py-3 sm:py-4 mt-4 mb-3 mr-3">Get
+                                    shipper details</button>
+                                <p class="text-base py-1  cursor-pointer border-b border-gray-600">Sign up to carrier
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="tab-5-content"
+                            class="relative p-6 xl:p-10 bg-white tab-content hidden col-span-12 xl:col-span-7"
+                            style="grid-row: 1;">
+                            <h1 class="text-4xl  font-medium">Move your teams and employees</h1>
+                            <p class="text-base my-4">Uber for Business helps to simplify business travel, expensing,
+                                and
+                                customer
+                                experiences.</p>
+                            <button
+                                class="bg-black text-white text-base leading-tight font-medium px-6 py-3 sm:py-4 mt-4 mb-3 mr-3">Learn
+                                more</button>
+
+                        </div>
+
+                        <div id="tab-6-content"
+                            class="relative p-6 xl:p-10 bg-white tab-content hidden col-span-12 xl:col-span-7"
+                            style="grid-row: 1;">
+                            <h1 class="text-4xl font-medium">Empowering public transportation</h1>
+                            <p class="text-base my-4">Uber’s software and transit solutions help local agencies build
+                                the best
+                                ways to move their communities forward.</p>
+                            <button
+                                class="bg-black text-white text-base leading-tight font-medium px-6 py-3 sm:py-4 mt-4 mb-3 mr-3">Learn
+                                more</button>
+
+                        </div>
+
+                        <div id="tab-7-content"
+                            class="relative p-6 xl:p-10 bg-white tab-content hidden col-span-12 xl:col-span-7"
+                            style="grid-row: 1;">
+                            <h1 class="text-4xl font-medium">Bike or scoot there</h1>
+                            <p class="text-base my-4">Go farther and have more fun with electric bikes and scooters.</p>
+                            <button
+                                class="bg-black text-white text-base leading-tight font-medium px-6 py-3 sm:py-4 mt-4 mb-3 mr-3">Get
+                                a ride</button>
+
+                        </div>
+                        <div id="tab-8-content"
+                            class="relative p-6 xl:p-10 bg-white tab-content hidden col-span-12 xl:col-span-7"
+                            style="grid-row: 1;">
+                            <h1 class="text-4xl font-medium">Ridesharing at new heights</h1>
+                            <p class="text-base my-4">Building the future of transportation with urban aerial
+                                ridesharing </p>
+                            <button
+                                class="bg-black text-white text-base leading-tight font-medium px-6 py-3 sm:py-4 mt-4 mb-3 mr-3">Learn
+                                more</button>
+
+                        </div>
+                        <div class="tab-image tab-1-image inset-0 z-0  col-span-12 relative xl:absolute object-cover object-center w-screen"
+                            style="z-index: -1;">
+                            <div class=""><img src="./images/Product-Masthead-Desktop_2.jpg" alt="businerss"></div>
+                        </div>
+                        <div class="inset-0 z-0 hidden col-span-12 relative xl:absolute object-cover object-center w-screen  tab-image tab-2-image "
+                            style="z-index: -1;">
+                            <div class=""><img src="./images/ride_2x (1).jpg" alt="businerss">
+                            </div>
+                        </div>
+                        <div class="inset-0 z-0 hidden col-span-12 relative xl:absolute object-cover object-center w-screen  tab-image tab-3-image"
+                            style="z-index: -1;">
+                            <div class=""><img src="./images/eats-hero-desktop-6.jpg" alt="businerss">
+                            </div>
+                        </div>
+                        <div class="inset-0 z-0 hidden col-span-12 relative xl:absolute object-cover object-center w-screen tab-image tab-4-image"
+                            style="z-index: -1;">
+                            <div class=""><img src="./images/Freight_2x.jpg" alt="businerss">
+                            </div>
+                        </div>
+                        <div class="inset-0 z-0 hidden col-span-12 relative xl:absolute object-cover object-center w-screen tab-image tab-5-image"
+                            style="z-index: -1;">
+                            <div class=""><img src="./images/Business_2x.jpg" alt="businerss">
+                            </div>
+                        </div>
+                        <div class="inset-0 z-0 hidden col-span-12 relative xl:absolute object-cover object-center w-screen tab-image tab-6-image"
+                            style="z-index: -1;">
+                            <div class=""><img src="./images/Transit_2x.jpg" alt="businerss">
+                            </div>
+                        </div>
+                        <div class="inset-0 z-0 hidden col-span-12 relative xl:absolute object-cover object-center w-screen tab-image tab-7-image"
+                            style="z-index: -1;">
+                            <div class=""><img src="./images/bikes_2x.jpg" alt="businerss"></div>
+                        </div>
+                        <div class="inset-0 z-0 hidden col-span-12 relative xl:absolute object-cover object-center w-screen tab-image tab-8-image"
+                            style="z-index: -1;">
+                            <div class=""><img src="./images/Fly_2x.jpg" alt="businerss"></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!-- 
+            <section class="inset-0">
+
+            </section> -->
+
+            <section>
+                <div class="m-0 xl:mt-12 relative" style="height: 600px;">
+                    <div
+                        style="height: 100%;background-image: url(images/Modalities_banner_home.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;">
+                    </div>
+                    <div class="grid grid-cols-12 p-6 xl:p-20 text-gray-800 absolute top-0">
+                        <div class="col-span-12 xl:col-span-5 grid-row-1">
+                            <h1 class=" py-4 text-3xl xl:text-4xl font-medium ">Setting 900+ cities in motion</h1>
+                            <button class="xl:my-4 border-b border-gray-500 hover:border-black "><a href="">view all
+                                    cities</a></button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section>
+                <div class="p-6 xl:p-16 pb-0">
+                    <h1 class="text-gray-800 py-4 text-3xl xl:text-4xl font-medium">Uber for Business</h1>
+                    <p class="py-2">The power of Uber in everyday business</p>
+                    <div class="grid grid-cols-12 gap-8 my-8">
+                        <div class="text-gray-800 col-span-12 sm:col-span-12 md:col-span-6 xl:col-span-4">
+                            <img src="./images/business-eater-horz2x.png" alt="business-eater" class="w-full" />
+                            <h3 class="py-4 text-2xl font-medium">Work meals</h3>
+                            <p class="mb-3">Delight your employees with their favorite meals delivered directly to
+                                anywhere
+                                they
+                                work.</p>
+                            <button class="my-6 border-b border-gray-500 hover:border-black cursor-pointer"><a
+                                    href="">Learn more</a></button>
+
+                        </div>
+                        <div class="text-gray-800 col-span-12 sm:col-span-12 md:col-span-6 xl:col-span-4">
+                            <img src="./images/employee-travel-horz2x.png" alt="business-eater" class="w-full" />
+                            <h3 class="py-4 text-2xl font-medium">Employee rides</h3>
+                            <p class="mb-3">Take the work out of work-related trips. Create ground travel and commute
+                                programs for
+                                employees.</p>
+                            <button class="my-6 border-b border-gray-500 hover:border-black cursor-pointer"><a
+                                    href="">Learn more</a></button>
+                        </div>
+                        <div class="text-gray-800 col-span-12 sm:col-span-12 md:col-span-6 xl:col-span-4">
+                            <img src="./images/ride-coordinator-horz2x.png" alt="business-eater" class="w-full" />
+                            <h3 class="py-4 text-2xl font-medium">Courtesy rides</h3>
+                            <p class="mb-3">Aim to impress. Arrange door-to-door rides for your customers, clients, and
+                                guests.</p>
+                            <button class="my-6 border-b border-gray-500 hover:border-black cursor-pointer"><a
+                                    href="">Learn more</a></button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section>
+                <div class="grid grid-cols-12 p-6 xl:p-16 pb-0">
+                    <div class="col-span-12 xl:col-span-4">
+                        <div class="text-gray-800">
+                            <h1 class=" py-4 text-3xl xl:text-4xl font-medium ">Our commitment to your safety</h1>
+                            <p class="">With every safety feature we add and every standard in our Community Guidelines
+                                we
+                                uphold, we're committed to working to create a safe environment for our users.</p>
+                            <div class="py-6 flex flex-col items-start">
+                                <button class="py-2"><a href="#"
+                                        class="border-b border-gray-500 hover:border-black py-2">Learn more from
+                                        Community
+                                        guidelines</a><br></button>
+                                <button class="py-2"><a href="#"
+                                        class="border-b border-gray-500 hover:border-black py-2">See all Safety
+                                        features</a><br></button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 xl:col-span-7 my-12 self-center">
+                        <img src="./images/Safety_ilo (1).svg" alt="Safety" />
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="p-6 xl:p-16 pb-0">
+                    <div class="grid grid-cols-3 gap-4  xl:gap-20 py-12">
+                        <div class="col-span-3 xl:col-span-1 text-gray-800">
+                            <img src="./icons/person-multiple-outlined.svg" alt="person-multiple" />
+                            <h1 class=" py-4 text-xl font-medium ">About us</h1>
+                            <p class="">Find out how we started, what drives us, and how we’re igniting opportunity.</p>
+                            <button class="py-2 my-4"><a href="#"
+                                    class="border-b border-gray-500 hover:border-black-">Learn more</a><br></button>
+                        </div>
+                        <div class="col-span-3 xl:col-span-1 text-gray-800">
+                            <img src="./icons/document-outlined.svg" alt="person-multiple" />
+                            <h1 class=" py-4 text-xl font-medium ">Newsroom</h1>
+                            <p class="">See announcements about our latest releases, initiatives, and partnerships.</p>
+                            <button class="py-2 my-4"><a href="#"
+                                    class="border-b border-gray-500 hover:border-black">Learn more</a><br></button>
+                        </div>
+                        <div class="col-span-3 xl:col-span-1 text-gray-800">
+                            <img src="./icons/home-outlined.svg" alt="person-multiple" />
+                            <h1 class=" py-4 text-xl font-medium ">Global citizenship</h1>
+                            <p class="">Read about our commitment to making a positive impact in the cities we serve.
+                            </p>
+                            <button class="py-2 my-4"><a href="#"
+                                    class="border-b border-gray-500 hover:border-black">Learn more</a><br></button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 py-12 gap-4">
+                        <div
+                            class="col-span-2 xl:col-span-1 border-b border-gray-500 hover:border-black cursor-pointer hover:text-gray-700">
+                            <h1 class="text-3xl pb-8">Sign up to drive</h1>
+                        </div>
+                        <div
+                            class="col-span-2 xl:col-span-1 border-b border-gray-500 hover:border-black cursor-pointer hover:text-gray-700">
+                            <h1 class="text-3xl pb-8">Sign up to ride</h1>
+                        </div>
+                    </div>
+            </section>
+
+
+            <footer>
+                <div class="p-6 xl:p-16 bg-black text-white">
+                    <div class="pb-4">
+                        <h1 class="py-8 text-2xl">Uber</h1>
+                        <div class="hover:underline cursor-pointer">Visit help center</div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-12 py-12">
+                        <div class="flex flex-col col-span-4 sm:col-span-2 xl:col-span-1">
+                            <h3 class="text-lg font-medium pb-4">Company</h3>
+                            <ul class="flex flex-col">
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">About us</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Newsroom</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Investors</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Blog</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Carrers</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col col-span-4 sm:col-span-2 xl:col-span-1">
+                            <h3 class="text-lg font-medium pb-4">Products</h3>
+                            <ul>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Ride</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Drive</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Eat</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Uber for Business</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Uber Freight</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col col-span-4 sm:col-span-2 xl:col-span-1">
+                            <h3 class="text-lg font-medium pb-4">Global Citizenship</h3>
+                            <ul>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Safety</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Diversity</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Transperncy</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col col-span-4 sm:col-span-2 xl:col-span-1">
+                            <h3 class="text-lg font-medium pb-4">Innovations</h3>
+                            <ul>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">ATG</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">AI</li>
+                                <li class="text-sm py-2 hover:text-gray-600 cursor-pointer">Elevate</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex col-span-3 sm:col-span-3 xl:col-span-1">
+                            <ul class="w-full flex justify-between">
+                                <li class="hover:bg-gray-600 cursor-pointer">X</li>
+                                <li class="hover:bg-gray-600 cursor-pointer">X</li>
+                                <li class="hover:bg-gray-600 cursor-pointer">X</li>
+                                <li class="hover:bg-gray-600 cursor-pointer">X</li>
+                                <li class="hover:bg-gray-600 cursor-pointer">X</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex col-span-4 sm:col-span-2 xl:col-span-1">
+                            <div class="p-2 hover:bg-gray-600 cursor-pointer">English</div>
+                            <div class="p-2 hover:bg-gray-600 cursor-pointer">Ajmer</div>
+                        </div>
+                        <div class="flex col-span-4 sm:col-span-2 xl:col-span-2 xl:justify-end">
+                            <div class="p-2 hover:bg-gray-600 cursor-pointer">Google Play</div>
+                            <div class="p-2 hover:bg-gray-600 cursor-pointer">App Store</div>
+                        </div>
+                        <h6 class="text-gray-600 col-span-4 sm:col-span-2 xl:col-span-2">2020 Uber Techonolgies Inc.
+                        </h6>
+                        <div class="col-span-3 sm:col-span-3 xl:col-span-2">
+                            <ul class="w-full flex justify-between">
+                                <li class="p-2 text-gray-600 cursor-pointer hover:text-gray-800 ">Privacy</li>
+                                <li class="p-2 text-gray-600 cursor-pointer hover:text-gray-800">Accessbility</li>
+                                <li class="p-2 text-gray-600 cursor-pointer hover:text-gray-800">Terms</li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="my-8 text-sm text-gray-600">
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="mobile-nav pb-16 bg-gray-100 hidden">
+            <div class="p-6 xl:p-8">
+                <ul class="py-8">
+                    <li class="text-3xl xl:text-4xl font-medium py-2 my-2 cursor-pointer">Company</li>
+                    <li class="text-3xl xl:text-4xl font-medium py-2 my-2 cursor-pointer">Safety</li>
+                    <li class="text-3xl xl:text-4xl font-medium py-2 my-2 cursor-pointer">Help</li>
+                    <li class="text-3xl xl:text-4xl font-medium py-2 my-2 cursor-pointer">COVID_19 resources</li>
+                </ul>
+                <div class="w-full flex items-center justify-center py-3 bg-gray-400 cursor-pointer my-3">
+                    <img src="./icons/icons8-squared-menu-30 (1).png" alt="menu" class="w-10 px-2" />Products
+                </div>
+                <div class="inline-flex items-center hover:bg-gray-400 rounded-full p-2 cursor-pointer">
+                    <img src="./icons/globe.png" alt="globe" class="w-10 inline px-2" />
+                    <span>EN</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
